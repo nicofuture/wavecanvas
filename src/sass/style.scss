@@ -1,0 +1,537 @@
+$primaryColor: #FFF;
+$background: url('../img/background.jpg');
+$overlay: rgba(0,
+0,
+0,
+0.2);
+// $text: #000;
+$secondaryColor: #364998;
+$font: 'Mogra',
+cursive;
+// $outline: rgba(241,158,151,1);
+* {
+    box-sizing: border-box;
+    font-size-adjust: auto;
+}
+
+html {
+    height: 100%;
+    background-color: #000;
+}
+
+body {
+    font-family: $font;
+    /* font-weight: 700; */
+    text-align: center;
+    height: 100%;
+    margin: auto;
+    background-image: $background;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+// a {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 0;
+//   margin: 0;
+//   border: 1px solid red;
+// }
+.box {
+    position: absolute;
+    color: $primaryColor;
+    background-color: $overlay;
+}
+
+.box-table {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    z-index: 99;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: scale(.01, .01);
+    -webkit-transform: scale(.01, .01);
+    -moz-transform: scale(.01, .01);
+    -ms-transform: scale(.01, .01);
+    -o-transform: scale(.01, .01);
+    transform-origin: 50% 50%;
+    opacity: 0;
+}
+
+.page-name {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+.hover-text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    z-index: 98;
+}
+
+#uno {
+    bottom: 20%;
+    left: 0;
+    right: 20%;
+    top: 0;
+    border-bottom: 3px solid $secondaryColor;
+    border-right: 3px solid $secondaryColor;
+}
+
+#uno .content {
+    z-index: 100;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    /* Safari & Chrome */
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+    /* Firefox */
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    /* Internet Explorer */
+    -o-transform: matrix(1, 0, 0, 1, 0, 0);
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12%;
+}
+
+#uno .hover-text {
+    // display: none;
+}
+
+#dos {
+    bottom: 20%;
+    left: 80%;
+    right: 0;
+    top: 0;
+    border-bottom: 3px solid $secondaryColor;
+}
+
+#tres {
+    bottom: 0;
+    left: 80%;
+    right: 0;
+    top: 80%;
+}
+
+#tres .content {
+    padding: 12% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cuatro {
+    bottom: 0;
+    left: 0;
+    right: 20%;
+    top: 80%;
+    border-right: 3px solid $secondaryColor;
+}
+
+// MUSIC
+#music {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+#music a {
+    border: none;
+    min-width: 400px;
+    min-height: 400px;
+    width: 400px;
+    height: 400px;
+    margin-right: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#music img {
+    padding: 15px;
+    max-width: 100%;
+    max-height: 100%;
+    transition: 0.5s;
+}
+
+#music img {
+    transition: 0.5s;
+    filter: grayscale(50%);
+    -webkit-filter: grayscale(50%);
+}
+
+#music img:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+
+#music iframe {
+    background-color: white;
+    padding: 15px;
+    border: none;
+    min-width: 450px;
+    min-height: 450px;
+}
+
+// VIDEO
+#video {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video iframe {
+    background-color: white;
+    padding: 15px;
+    border: none;
+    width: 450px;
+    height: 450px;
+}
+
+// TOUR
+#tour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+#tour .poster a {
+    border: none;
+    min-width: 350px;
+    min-height: 350px;
+    width: 350px;
+    height: 350px;
+    margin-right: 10px;
+    background-color: white;
+    display: block;
+}
+
+#tour #img_container {
+    position: relative;
+}
+
+#tour #img_container img {
+    -webkit-transition: opacity .5s ease-in-out, -webkit-filter .5s;
+    -moz-transition: opacity .5s ease-in-out, -moz-filter .5s;
+    -o-transition: opacity .5s ease-in-out, -o-filter .5s;
+    transition: opacity .5s ease-in-out, filter .5s;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#tour #img_container img.visible {
+    opacity: 1;
+}
+
+#tour .poster img {
+    padding: 20px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media (pointer: fine) and (hover: hover) {
+    #tour .poster img {
+        filter: grayscale(50%);
+        -webkit-filter: grayscale(50%);
+    }
+}
+
+#tour .poster img:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+
+#tour .tour-dates {
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 5px solid transparent;
+    height: 350px;
+    min-width: 300px;
+    max-width: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+
+#tour .tour-dates ul {
+    font-size: 18px;
+    line-height: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    padding: 0;
+}
+
+#tour .tour-dates li {
+    text-decoration: none;
+    display: inline;
+}
+
+.tour-dates li:first-child {
+    margin-right: 10px;
+}
+
+#tour .tour-dates li a {
+    padding: 5px;
+    line-height: 100%;
+    font-weight: bold;
+    background-color: $secondaryColor;
+    text-decoration: none;
+    color: $primaryColor;
+    transition: 0.4s;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+#tour .tour-dates li a:hover {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+}
+
+// MERCH
+#merch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+#merch .merch-photos a {
+    border: none;
+    min-width: 400px;
+    min-height: 400px;
+    width: 400px;
+    height: 400px;
+    margin-right: 20px;
+    background-color: white;
+    padding: 2%;
+    display: block;
+}
+
+#merch #img_container1 {
+    position: relative;
+}
+
+#merch #img_container1 img {
+    -webkit-transition: opacity .5s ease-in-out, -webkit-filter .5s;
+    -moz-transition: opacity .5s ease-in-out, -moz-filter .5s;
+    -o-transition: opacity .5s ease-in-out, -o-filter .5s;
+    transition: opacity .5s ease-in-out, filter .5s;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#merch #img_container1 img.visible {
+    opacity: 1;
+}
+
+#merch .merch-photos img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media (pointer: fine) and (hover: hover) {
+    #merch .merch-photos img {
+        filter: grayscale(50%);
+        -webkit-filter: grayscale(50%);
+    }
+}
+
+#merch .merch-photos img:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+}
+
+#merch .merch-info {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    min-width: 300px;
+    min-height: 400px;
+    max-width: 300px;
+    max-height: 400px;
+    text-align: left;
+    padding-left: 1%;
+}
+
+#merch h1 {
+    margin: 8px 0;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+
+#merch h2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+#merch .merch-info a {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 17px;
+    width: fit-content;
+    width: -moz-fit-content;
+    background-color: $secondaryColor;
+    text-decoration: none;
+    color: $primaryColor;
+    transition: 0.4s;
+    letter-spacing: 2px;
+    padding: 2% 3%;
+}
+
+#merch .merch-info a:hover {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+}
+
+#merch p {
+    margin: 15px 0;
+    font-weight: bold;
+    text-align: left;
+    font-size: 17px;
+    line-height: 27px;
+}
+
+/* CONTACT */
+
+#contact {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+#contact p {
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    width: 750px;
+}
+
+#contact .email a {
+    background-color: $secondaryColor;
+    text-decoration: none;
+    color: $primaryColor;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+#contact .email a:hover,
+a:focus {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+}
+
+#contact .social {
+    font-family: sans-serif;
+    margin-top: 50px;
+    width: 750px;
+}
+
+#contact .social a {
+    display: inline-block;
+    margin: 20px;
+    font-size: 25px;
+    line-height: 45px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+    color: $primaryColor;
+    background-color: $secondaryColor;
+}
+
+#contact .social a:hover {
+    background-color: white;
+    transition: 0.5s;
+}
+
+#contact .soundcloud:hover {
+    color: #FF3300;
+}
+
+#contact .bandcamp:hover {
+    color: #629AA9;
+}
+
+#contact .tumblr:hover {
+    color: #35465C;
+}
+
+#contact .facebook:hover {
+    color: #3b5998;
+}
+
+#contact .mail:hover {
+    color: #000;
+}
+
+#contact .youtube:hover {
+    color: #ff0000;
+}
+
+#contact .spotify:hover {
+    color: #1db954;
+}
+
+#contact .whatsapp:hover {
+    color: #128c7e;
+}
+
+#contact .instagram:hover {
+    color: #833ab4;
+}
+
+#contact .twitter:hover {
+    color: #1da1f2;
+}
+
+#contact .messenger:hover {
+    color: #0084ff;
+}
+
+#contact .apple:hover {
+    color: grey;
+}
