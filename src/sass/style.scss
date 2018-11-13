@@ -3,8 +3,7 @@ $background: url('../img/background.jpg');
 $overlay: rgba(171,233,217,.7);
 // $text: #000;
 $secondaryColor: rgba(241,158,151,1);
-$font: 'Mogra',
-cursive;
+$font: 'Dosis', sans-serif;
 // $outline: rgba(241,158,151,1);
 * {
     box-sizing: border-box;
@@ -254,8 +253,8 @@ body {
 
 @media (pointer: fine) and (hover: hover) {
     #tour .poster img {
-        filter: grayscale(25%);
-        -webkit-filter: grayscale(25%);
+        filter: grayscale(30%);
+        -webkit-filter: grayscale(30%);
     }
 }
 
@@ -362,8 +361,8 @@ body {
 
 @media (pointer: fine) and (hover: hover) {
     #merch .merch-photos img {
-        filter: grayscale(25%);
-        -webkit-filter: grayscale(25%);
+        filter: grayscale(30%);
+        -webkit-filter: grayscale(30%);
     }
 }
 
