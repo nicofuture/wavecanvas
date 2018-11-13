@@ -1,8 +1,11 @@
 if (document.getElementById('img_container')) {
     (function () {
         var images = [
-            'img/1.jpg',
-            'img/4.gif'
+          'img/background.jpg',
+          'img/1.jpg',
+          'img/3.jpg',
+          'img/4.jpg',
+          'img/5.jpg'
         ]
         i = 0;
         var strHtml = "";

@@ -167,18 +167,17 @@
 
 
 
-
   #contact {
     height: 100%;
     width: 100%;
   }
 
   #contact p {
+    margin-top: 0;
     min-width: 400px;
     max-width: 400px;
     width: 400px;
    font-size: 18px;
-   margin-bottom: 40px;
   }
 
   #contact .mail {
