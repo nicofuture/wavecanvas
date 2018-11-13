@@ -12,7 +12,7 @@ var $uno = $('#uno'),
     $section_portrait = widthForMobileSection + "%",
     $font_size = fontSize + "px",
     $font_size_mobile = fontSizeMobile + "px",
-    animeSpeed = 1.2,
+    animeSpeed = 1.05,
     browserIsSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor),
     transitionEnd = browserIsSafari ? 'webkitTransitionEnd' : 'transitionend';
 

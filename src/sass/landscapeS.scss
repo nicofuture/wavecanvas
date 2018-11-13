@@ -57,10 +57,11 @@
 
 
   #video iframe {
-    width: 400px;
-    height: 225px;
+    min-height: 230px;
+    min-width: 400px;
+    max-width: 400px;
+    max-height: 230px;
   }
-
 
   #merch .merch-photos a {
     min-width: 230px;
@@ -120,16 +121,27 @@
     width: 100%;
   }
 
+  //
+  // #tour .poster a {
+  //   border: none;
+  //   min-width: 250px;
+  //   min-height: 250px;
+  //   width: 250px;
+  //   height: 250px;
+  //   background-color: white;
+  //   display: block;
+  // }
 
-  #tour .poster a {
+  #tour iframe {
     border: none;
-    min-width: 250px;
-    min-height: 250px;
-    width: 250px;
-    height: 250px;
+    min-width: 260px;
+    min-height: 260px;
+    width: 260px;
+    height: 260px;
     background-color: white;
     display: block;
   }
+
 
   #tour .poster img {
     padding: 10px;

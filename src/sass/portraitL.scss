@@ -116,7 +116,15 @@
     font-size: 20px;
   }
 
+  #video iframe {
+    min-height: 394px;
+    min-width: 600px;
+  }
 
+
+  #tour iframe {
+    display: none;
+  }
 
   #tour .poster {
     display: none;
@@ -146,35 +154,6 @@
     padding: 10%;
     width: 100%;
   }
-  //
-  // #contact p {
-  //   font-size: 15px;
-  //   line-height: 25px;
-  //   margin-bottom: 40px;
-  // }
-  //
-  // #contact .mail-desktop a {
-  //   padding: 4px;
-  //   font-size: 15px;
-  // }
-  //
-  // #contact .social {
-  //   margin-top: 50px;
-  // }
-  //
-  // #contact .social a {
-  //   display: inline-block;
-  //   margin: 15px;
-  //   font-size: 20px;
-  //   line-height: 40px;
-  //   height: 40px;
-  //   width: 40px;
-  //   border-radius: 50px;
-  //   text-align: center;
-  //   color: $primaryColor;
-  //   background-color: $secondaryColor;
-  // }
-
 
   #contact p {
       display: none;
@@ -186,7 +165,7 @@
 
   #contact .social {
     height: 500px;
-    width: 400px;
+    width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -197,6 +176,7 @@
   #contact .social a {
     display: inline-block;
     font-size: 40px;
+    margin: 40px;
     line-height: 80px;
     height: 80px;
     width: 80px;
