@@ -222,54 +222,58 @@ body {
     height: 350px;
     margin-right: 10px;
     background-color: white;
-    display: block;
 }
-
-#tour #img_container {
-    position: relative;
-}
-
-#tour #img_container img {
-    -webkit-transition: opacity .5s ease-in-out, -webkit-filter .5s;
-    -moz-transition: opacity .5s ease-in-out, -moz-filter .5s;
-    -o-transition: opacity .5s ease-in-out, -o-filter .5s;
-    transition: opacity .5s ease-in-out, filter .5s;
-    opacity: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#tour #img_container img.visible {
-    opacity: 1;
-}
-
-#tour .poster img {
-    padding: 20px;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-@media (pointer: fine) and (hover: hover) {
-    #tour .poster img {
-        filter: grayscale(30%);
-        -webkit-filter: grayscale(30%);
-    }
-}
-
-#tour .poster img:hover {
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
-}
+//
+// #tour #img_container {
+//     position: relative;
+// }
+//
+// #tour #img_container img {
+//     -webkit-transition: opacity .5s ease-in-out, -webkit-filter .5s;
+//     -moz-transition: opacity .5s ease-in-out, -moz-filter .5s;
+//     -o-transition: opacity .5s ease-in-out, -o-filter .5s;
+//     transition: opacity .5s ease-in-out, filter .5s;
+//     opacity: 0;
+//     position: absolute;
+//     left: 50%;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+// }
+//
+// #tour #img_container img.visible {
+//     opacity: 1;
+// }
+//
+// #tour .poster img {
+//     padding: 20px;
+//     max-width: 100%;
+//     max-height: 100%;
+// }
+//
+// @media (pointer: fine) and (hover: hover) {
+//     #tour .poster img {
+//         filter: grayscale(30%);
+//         -webkit-filter: grayscale(30%);
+//     }
+// }
+//
+// #tour .poster img:hover {
+//     filter: grayscale(0%);
+//     -webkit-filter: grayscale(0%);
+// }
 
 #tour .tour-dates {
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid transparent;
-    border-right: 5px solid transparent;
-    height: 350px;
-    min-width: 300px;
-    max-width: 300px;
+  // border: 1px solid red;
+    // border-top: none;
+    // border-bottom: 20px solid transparent;
+    // border-left: 20px solid transparent;
+    // border-right: 5px solid transparent;
+    padding: 10px;
+    padding-left: 20px;
+    // min-height: 350px;
+    // max-height: 350px;
+    min-width: 310px;
+    max-width: 310px;
     overflow-y: scroll;
     overflow-x: hidden;
     display: flex;
@@ -278,8 +282,8 @@ body {
 }
 
 #tour .tour-dates ul {
-    font-size: 18px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 35px;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-weight: bold;
@@ -295,8 +299,18 @@ body {
     margin-right: 10px;
 }
 
+#tour .tour-dates h1 span {
+    padding: 4px;
+    font-size: 17px;
+    line-height: 100%;
+    // font-weight: bold;
+    background-color: white;
+    color: black;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
 #tour .tour-dates li a {
-    padding: 5px;
+    padding: 4px;
     line-height: 100%;
     font-weight: bold;
     background-color: $secondaryColor;
@@ -435,7 +449,7 @@ body {
     flex-flow: column;
 }
 
-#contact p {
+#contact .text p {
     font-size: 20px;
     line-height: 40px;
     margin-bottom: 30px;
@@ -445,7 +459,7 @@ body {
     width: 750px;
 }
 
-#contact a {
+#contact .text a {
     background-color: $secondaryColor;
     text-decoration: none;
     color: $primaryColor;
@@ -457,23 +471,23 @@ body {
     transition: 0.5s;
 }
 
-#contact a:hover, a:focus {
+#contact .text a:hover, a:focus {
     background-color: $primaryColor;
     color: #000;
 }
 
 #contact .social {
-  margin-top: 30px;
-    font-family: sans-serif;
+    margin-top: 30px;
+    // font-family: sans-serif;
     width: 750px;
 }
 
 #contact .social a {
     padding: 0;
+    margin: 18px;
     font-weight: normal;
     letter-spacing: normal;
     display: inline-block;
-    margin: 18px;
     font-size: 20px;
     line-height: 40px;
     height: 40px;
